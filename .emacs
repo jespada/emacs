@@ -64,3 +64,6 @@
 (add-hook 'ruby-mode-hook (lambda () (interactive) (column-marker-1 80)))
 (add-hook 'java-mode-hook (lambda () (interactive) (column-marker-1 80)))
 ;;toggle column 80 marker
+
+;; See matching parens
+(show-paren-mode t)
