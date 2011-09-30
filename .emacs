@@ -78,3 +78,7 @@
 (add-hook 'completion-setup-hook
   (lambda () (run-at-time 12 nil
     (lambda () (delete-windows-on "*Completions*")))))
+
+;; KEY BINDINGS
+;;skip to line number
+(global-set-key "\C-Xg" 'goto-line)
