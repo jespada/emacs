@@ -73,3 +73,8 @@
 (autoload 'whitespace-mode "whitespace" "Toggle whitespace visualization." t)
 (autoload 'whitespace-toggle-options "whitespace" "Toggle local `whitespace-mode' options." t)
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
+
+;; make completion buffers disappear after 12 seconds.
+(add-hook 'completion-setup-hook
+  (lambda () (run-at-time 12 nil
+    (lambda () (delete-windows-on "*Completions*")))))
