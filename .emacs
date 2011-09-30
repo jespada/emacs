@@ -34,9 +34,9 @@
 
 ;;
 ;; Use (setq ...) to set value locally to a buffer
-;; Use (setq-default ...) to set value globally 
+;; Use (setq-default ...) to set value globally
 ;;
-(setq-default indent-tabs-mode nil) 
+(setq-default indent-tabs-mode nil)
 
 
 ;; ===== Adjusting the Basic Indentation Width Used in Code =====
@@ -67,3 +67,9 @@
 
 ;; See matching parens
 (show-paren-mode t)
+
+;; Whitespace
+(require 'whitespace)
+(autoload 'whitespace-mode "whitespace" "Toggle whitespace visualization." t)
+(autoload 'whitespace-toggle-options "whitespace" "Toggle local `whitespace-mode' options." t)
+(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
