@@ -80,9 +80,18 @@
     (lambda () (delete-windows-on "*Completions*")))))
 
 
-;;Auto complete Mode                                                                                                                                                  (require 'auto-complete)
+;;===== Auto complete Mode ======
+(require 'auto-complete)
+(require 'auto-complete-config)
 (global-auto-complete-mode t)
 
-;; KEY BINDINGS
+;; start completion when entered 2 characters
+(setq ac-auto-start 2)
+
+;; Completion will never be started automatically.                                                                                                                    ;;(setq ac-auto-start nil)
+
+
+
+;;==== KEY BINDINGS ====
 ;;skip to line number
 (global-set-key "\C-Xg" 'goto-line)
