@@ -79,6 +79,10 @@
   (lambda () (run-at-time 12 nil
     (lambda () (delete-windows-on "*Completions*")))))
 
+
+;;Auto complete Mode                                                                                                                                                  (require 'auto-complete)
+(global-auto-complete-mode t)
+
 ;; KEY BINDINGS
 ;;skip to line number
 (global-set-key "\C-Xg" 'goto-line)
