@@ -90,6 +90,9 @@
 
 ;; Completion will never be started automatically.                                                                                                                    ;;(setq ac-auto-start nil)
 
+;;=== EMACS PERFORMANCE ===
+;; re-draw display before accept new imput (not recommended for old computers)
+;;(setq redisplay-dont-pause t)
 
 
 ;;==== KEY BINDINGS ====
