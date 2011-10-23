@@ -94,6 +94,8 @@
 ;; re-draw display before accept new imput (not recommended for old computers)
 ;;(setq redisplay-dont-pause t)
 
+;;=== EMACS MINIMALIST ===
+;;(menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1)
 
 ;;==== KEY BINDINGS ====
 ;;skip to line number
