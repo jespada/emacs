@@ -150,12 +150,18 @@ Cancel prevoius timer, started by this function"
 	)))
   )
 
+;(defun tea-time-show-notification (notification)
+;  "Show notification. Use mumbles."
+;    (message notification)
+;    (run-hooks 'tea-time-notification-hook)
+;    )
+;
+;(provide 'tea-time)
+
 (defun tea-time-show-notification (notification)
-  "Show notification. Use mumbles."
-    (message notification)
-    (run-hooks 'tea-time-notification-hook)
-    )
+"Show notification. Use notify-send."
+(start-process "tea-time-notify-notification" nil "notify-send" notification)
+)
 
 (provide 'tea-time)
 ;;; tea-time.el ends here
-
