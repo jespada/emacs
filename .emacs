@@ -97,4 +97,7 @@
 
 ;;==== KEY BINDINGS ====
 ;;skip to line number
-(global-set-key "\C-Xg" 'goto-line)
+;;(global-set-key "\C-Xg" 'goto-line)(no need I have: M-g g)
+
+;; F12 to run eshell
+(global-set-key (kbd "<f12>") 'eshell)
