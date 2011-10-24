@@ -1,18 +1,21 @@
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("0174d99a8f1fdc506fa54403317072982656f127" "e9704e8b957e4151cd570c5f25ec81c297aa2b6a" default)))
  '(inhibit-startup-screen t))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
 ;;EMACS-WIDE SETTINGS
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
+;Themes
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;;keep backup files in /tmp
 (setq backup-directory-alist
@@ -85,17 +88,23 @@
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 
-;; start completion when entered 2 characters
-(setq ac-auto-start 2)
+;; start completion when entered 3 characters
+(setq ac-auto-start 3)
 
 ;; Completion will never be started automatically.                                                                                                                    ;;(setq ac-auto-start nil)
 
 ;;=== EMACS PERFORMANCE ===
 ;; re-draw display before accept new imput (not recommended for old computers)
 ;;(setq redisplay-dont-pause t)
-
+(blink-cursor-mode -1)
 ;;=== EMACS MINIMALIST ===
 ;;(menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1)
+
+;;=== Interactively Do Things ===
+;;Ido Mode
+(ido-mode 1)
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
 
 ;;==== KEY BINDINGS ====
 ;;skip to line number
