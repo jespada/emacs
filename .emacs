@@ -3,6 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector [zenburn-bg zenburn-red zenburn-green zenburn-yellow zenburn-blue zenburn-magenta zenburn-cyan zenburn-fg])
+ '(custom-enabled-themes (quote (wheatgrass)))
  '(custom-safe-themes (quote ("0174d99a8f1fdc506fa54403317072982656f127" "e9704e8b957e4151cd570c5f25ec81c297aa2b6a" default)))
  '(inhibit-startup-screen t))
 (custom-set-faces
@@ -98,7 +100,7 @@
 ;;(setq redisplay-dont-pause t)
 (blink-cursor-mode -1)
 ;;=== EMACS MINIMALIST ===
-;;(menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1)
+(menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1)
 
 ;;=== Interactively Do Things ===
 ;;Ido Mode
