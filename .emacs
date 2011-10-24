@@ -100,7 +100,7 @@
 ;;(setq redisplay-dont-pause t)
 (blink-cursor-mode -1)
 ;;=== EMACS MINIMALIST ===
-(menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1)
+;;(menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1)
 
 ;;=== Interactively Do Things ===
 ;;Ido Mode
