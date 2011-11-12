@@ -18,7 +18,7 @@
 ;;Themes
 (add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
-;;(load-theme 'solarized-dark)
+(load-theme 'solarized-dark)
 
 ;;keep backup files in /tmp
 (setq backup-directory-alist
