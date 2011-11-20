@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (solarized-dark)))
- '(custom-safe-themes (quote ("0174d99a8f1fdc506fa54403317072982656f127" default)))
+ '(custom-safe-themes (quote ("5600dc0bb4a2b72a613175da54edb4ad770105aa" "0174d99a8f1fdc506fa54403317072982656f127" default)))
  '(inhibit-startup-screen t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -115,3 +115,22 @@
 
 ;; F12 to run eshell
 (global-set-key (kbd "<f12>") 'eshell)
+
+;;Google Search - from prelude-google
+(defun google-search ()
+  "Googles a query or region if any."
+  (interactive)
+  (browse-url
+   (concat
+    "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
+    (if mark-active
+        (buffer-substring (region-beginning) (region-end))
+      (read-string "Google: ")))))
+
+;;DuckDuckgo search
+(defun duckduckgo-search (text)
+  "Search DuckDuckGo from Emacs."
+  (interactive "sSearch: ")
+  (browse-url
+   (concat "https://duckduckgo.com/?q="
+           (replace-regexp-in-string " " "+" text))))
