@@ -3,8 +3,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(background-color "#042028")
+ '(background-mode dark)
+ '(cursor-color "#708183")
  '(custom-enabled-themes (quote (solarized-dark)))
- '(custom-safe-themes (quote ("2929c912071f6f2d7ae8164a7fb2fd1c992a0d6a" "5600dc0bb4a2b72a613175da54edb4ad770105aa" "0174d99a8f1fdc506fa54403317072982656f127" default)))
+ '(custom-safe-themes (quote ("6edbc751b0b740dca0fe04df8d8b4ae2bc55ae3b" "1440d751f5ef51f9245f8910113daee99848e2c0" "485737acc3bedc0318a567f1c0f5e7ed2dfde3fb" "2929c912071f6f2d7ae8164a7fb2fd1c992a0d6a" "5600dc0bb4a2b72a613175da54edb4ad770105aa" "0174d99a8f1fdc506fa54403317072982656f127" default)))
+ '(foreground-color "#708183")
  '(inhibit-startup-screen t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -18,8 +22,10 @@
 ;;Themes
 (add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
-(load-theme 'solarized-dark)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+
+;;(load-theme 'solarized-dark)
+(load-theme 'zenburn)
 
 
 ;;keep backup files in /tmp
@@ -64,7 +70,8 @@
   (setq c-basic-offset 2))
 (add-hook 'ruby-mode-hook 'my-ruby-mode-hook)
 
-
+;;=== camelCase Words ===
+(global-subword-mode 1)
 
 
 ;;show column markers
