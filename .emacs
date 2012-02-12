@@ -7,7 +7,7 @@
  '(background-mode dark)
  '(cursor-color "#708183")
  '(custom-enabled-themes (quote (solarized-dark)))
- '(custom-safe-themes (quote ("6edbc751b0b740dca0fe04df8d8b4ae2bc55ae3b" "1440d751f5ef51f9245f8910113daee99848e2c0" "485737acc3bedc0318a567f1c0f5e7ed2dfde3fb" "2929c912071f6f2d7ae8164a7fb2fd1c992a0d6a" "5600dc0bb4a2b72a613175da54edb4ad770105aa" "0174d99a8f1fdc506fa54403317072982656f127" default)))
+ '(custom-safe-themes (quote ("e81c9d66abd76f81009e2843e655cb4c3ae46cfd42b27471520d8eed748fcb23" "6edbc751b0b740dca0fe04df8d8b4ae2bc55ae3b" "1440d751f5ef51f9245f8910113daee99848e2c0" "485737acc3bedc0318a567f1c0f5e7ed2dfde3fb" "2929c912071f6f2d7ae8164a7fb2fd1c992a0d6a" "5600dc0bb4a2b72a613175da54edb4ad770105aa" "0174d99a8f1fdc506fa54403317072982656f127" default)))
  '(foreground-color "#708183")
  '(inhibit-startup-screen t))
 (custom-set-faces
@@ -118,6 +118,9 @@
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
+
+;;=== highlight-indentation ===
+(require 'highlight-indentation)
 
 ;;==== KEY BINDINGS ====
 ;;skip to line number
