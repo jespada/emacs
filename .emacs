@@ -70,6 +70,10 @@
   (setq c-basic-offset 2))
 (add-hook 'ruby-mode-hook 'my-ruby-mode-hook)
 
+;;RVM - use rvm's default ruby for the current Emacs session
+(require 'rvm)
+(rvm-use-default)
+
 ;;=== camelCase Words ===
 (global-subword-mode 1)
 
@@ -121,6 +125,10 @@
 
 ;;=== highlight-indentation ===
 (require 'highlight-indentation)
+
+;;=== Chef-Mode ===
+(require 'chef-mode)
+
 
 ;;==== KEY BINDINGS ====
 ;;skip to line number
