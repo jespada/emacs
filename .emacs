@@ -27,6 +27,12 @@
 ;;(load-theme 'solarized-dark)
 (load-theme 'zenburn)
 
+;;Marmalade Repo
+(require 'package)
+(package-initialize)
+
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
 ;;keep backup files in /tmp
 (setq backup-directory-alist
