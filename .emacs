@@ -114,7 +114,8 @@
 ;; start completion when entered 3 characters
 (setq ac-auto-start 3)
 
-;; Completion will never be started automatically.                                                                                                                    ;;(setq ac-auto-start nil)
+;; Completion will never be started automatically.
+;;(setq ac-auto-start nil)
 
 ;;=== EMACS PERFORMANCE ===
 ;; re-draw display before accept new imput (not recommended for old computers)
