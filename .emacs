@@ -24,6 +24,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
+;;Copy/paste fix
+(setq x-select-enable-clipboard t)
 ;;(load-theme 'solarized-dark)
 (load-theme 'zenburn)
 
