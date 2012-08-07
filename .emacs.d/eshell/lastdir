@@ -1,0 +1,6 @@
+~/chef-repo/roles
+/home/jespada/chef-repo
+~/chef-repo/cookbooks/archiva/recipes
+~/chef-repo/cookbooks/chef_handler/attributes
+/home/jespada/chef-repo/cookbooks/chef_handler
+/home/jespada/chef-repo/cookbooks/chef_handler/recipes
