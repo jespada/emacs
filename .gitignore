@@ -1,1 +1,6 @@
 .emacs.d/auto-save-list
+.emacs.d/ac-comphist.dat
+.emacs.d/elpa/archives/gnu/archive-contents
+.emacs.d/elpa/archives/marmalade/archive-contents
+.emacs.d/eshell/history
+.emacs.d/eshell/lastdir
