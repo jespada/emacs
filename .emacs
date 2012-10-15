@@ -3,8 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-;; '(custom-enabled-themes (quote (solarized-dark)))
-
+ '(custom-safe-themes (quote ("e81c9d66abd76f81009e2843e655cb4c3ae46cfd42b27471520d8eed748fcb23" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" default)))
  '(inhibit-startup-screen t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -20,10 +19,13 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
+
 ;;Copy/paste fix
 (setq x-select-enable-clipboard t)
+
+;;Default theme
 ;;(load-theme 'solarized-dark)
-;;(load-theme 'zenburn)
+(load-theme 'zenburn)
 
 ;;Marmalade Repo
 (require 'package)
@@ -73,6 +75,10 @@
 (defun my-ruby-mode-hook ()
   (setq c-basic-offset 2))
 (add-hook 'ruby-mode-hook 'my-ruby-mode-hook)
+
+;; Setting rbenv path (http://marc-bowes.com/2012/03/10/rbenv-with-emacs.html)
+(setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:" (getenv "HOME") "/.rbenv/bin:" (getenv "PATH")))
+(setq exec-path (cons (concat (getenv "HOME") "/.rbenv/shims") (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
 
 ;;RVM - use rvm's default ruby for the current Emacs session
 (require 'rvm)

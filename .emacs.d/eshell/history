@@ -1,10 +1,1 @@
-less ../cookbooks/mysql/attributes/server.rb
 cd ..
-less cookbooks/sonar/attributes/default.rb 
-cat cookbooks/sonar/templates/default/nginx_site_default.erb 
-less ../attributes/default.rb 
-cd ..
-cd recipes/
-ll
-cat email.rb 
-cat groveio.rb 
