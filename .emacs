@@ -76,10 +76,36 @@
 (defun my-ruby-mode-hook ()
   (setq c-basic-offset 2))
 ;;REPL
-(autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
-(autoload 'inf-ruby-keys "inf-ruby" "" t)
-(eval-after-load 'ruby-mode
-'(add-hook 'ruby-mode-hook 'inf-ruby-keys))
+;;(autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
+;;(autoload 'inf-ruby-keys "inf-ruby" "" t)
+;;(eval-after-load 'ruby-mode
+;;'(add-hook 'ruby-mode-hook 'inf-ruby-keys))
+
+(require 'inf-ruby)
+(autoload 'run-ruby "inf-ruby"
+          "Run an inferior Ruby process")
+(autoload 'inf-ruby-keys "inf-ruby"
+          "Set local key defs for inf-ruby in ruby-mode")
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+          (inf-ruby-keys)
+          ))
+
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Berksfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Cheffile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Kitchenfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Berksfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Thorfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Kitchenfile$" . ruby-mode))
+(require 'ruby-block)
+(ruby-block-mode t)
 
 (add-hook 'ruby-mode-hook 'my-ruby-mode-hook)
 
