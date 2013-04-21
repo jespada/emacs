@@ -60,6 +60,8 @@
 ;;
 (setq-default indent-tabs-mode nil)
 
+;; enable for all programming modes
+(add-hook 'prog-mode-hook 'subword-mode)
 
 ;; ===== Adjusting the Basic Indentation Width Used in Code =====
 (setq-default c-basic-offset 4)
